@@ -1,0 +1,14 @@
+# Private connection information
+.Renviron
+*password*
+*credential*
+
+# R session files
+.RData
+.Rhistory
+.Ruserdata
+.Rproj.user/
+
+# Operating-system files
+Thumbs.db
+.DS_Store

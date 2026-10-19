@@ -1,0 +1,46 @@
+SIMPLIFIED PROJECT VALIDATION
+=============================
+
+Required files: PASS
+Exactly 270 measurements: PASS
+Exactly 9 conditions: PASS
+30 measurements per condition: PASS
+All timings are finite: PASS
+All timings are positive: PASS
+Every query returned one row: PASS
+
+Condition counts:
+ table_size index_method measurements
+      1e+04      B+ tree           30
+      1e+05      B+ tree           30
+      5e+05      B+ tree           30
+      1e+04         Hash           30
+      1e+05         Hash           30
+      5e+05         Hash           30
+      1e+04     No index           30
+      1e+05     No index           30
+      5e+05     No index           30
+
+File check:
+                               file exists
+                         00_setup.R   TRUE
+               01_collect_timings.R   TRUE
+                   database_setup.R   TRUE
+               02_simple_analysis.R   TRUE
+                          README.md   TRUE
+                   docs/ABSTRACT.md   TRUE
+                docs/METHODOLOGY.md   TRUE
+         docs/PRESENTATION_GUIDE.md   TRUE
+               docs/FRIEND_SETUP.md   TRUE
+               data/query_times.csv   TRUE
+           data/run_information.txt   TRUE
+ sql/01_create_benchmark_tables.sql   TRUE
+  sql/02_verify_execution_plans.sql   TRUE
+     results/summary_statistics.csv   TRUE
+        results/speedup_results.csv   TRUE
+  results/paired_t_test_results.csv   TRUE
+       results/final_conclusion.txt   TRUE
+      plots/mean_response_times.png   TRUE
+      plots/boxplot_500000_rows.png   TRUE
+
+Overall status: PASS

@@ -1,0 +1,19 @@
+SIMPLIFIED PROJECT CONCLUSION
+=============================
+
+The experiment used 270 real PostgreSQL response-time measurements:
+3 table sizes x 3 methods x 30 matched searches.
+
+At 500,000 rows, No index averaged 71.07 ms.
+At 500,000 rows, B+ tree averaged 1.77 ms.
+At 500,000 rows, Hash averaged 1.67 ms.
+B+ tree was approximately 40.21 times faster than No index.
+Hash was approximately 42.55 times faster than No index.
+
+No index versus B+ tree paired-test p-value: 1.013e-18
+No index versus Hash paired-test p-value: 1.102e-18
+B+ tree versus Hash paired-test p-value: 0.3113
+
+Both indexed methods were significantly faster than No index under the tested conditions. Hash had a slightly lower observed mean than B+ tree at 500,000 rows, but their difference was not statistically significant.
+
+These conclusions apply to equality searches on this PostgreSQL database and this computer. Individual timings can change because of caching and background system activity.
