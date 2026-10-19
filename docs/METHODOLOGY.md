@@ -57,7 +57,16 @@ Execution-plan screenshots demonstrate how PostgreSQL searched. The final
 statistical conclusion uses the 30 repeated R measurements, not a single
 execution time.
 
-## 7. Limitations
+## 7. Syllabus connection
+
+The separate `04_syllabus_math.R` script uses the same real timings to estimate
+expected response time with the sample mean, calculate variance, calculate the
+empirical probability that an index is faster for a matched search, and measure
+Pearson and Spearman correlation between table size and No-index response time.
+These are supporting syllabus calculations; they do not replace the main
+paired comparison.
+
+## 8. Limitations
 
 - Results apply to equality searches in this experimental setup.
 - Timings can be influenced by caching and background computer activity.

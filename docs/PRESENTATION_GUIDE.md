@@ -61,6 +61,15 @@ conditions, especially for the largest table. Both B+ tree and Hash were much
 faster than No index, but there was no statistically clear winner between the
 two indexed methods.”
 
+## Optional syllabus connection
+
+If asked how the project uses the syllabus, show `04_syllabus_math.R` and say:
+
+“The sample mean estimates expected response time, the sample variance measures
+variation, the proportion of matched searches where an index is faster gives an
+empirical probability, and correlation describes how No-index time changes as
+table size grows.”
+
 ## Files to show
 
 1. Nine tables in pgAdmin.

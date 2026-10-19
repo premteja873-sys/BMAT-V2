@@ -1,0 +1,7 @@
+"table_size","comparison","successful_pairs","pairs","empirical_probability"
+10000,"B+ tree faster than No index",25,30,0.833333333333333
+10000,"Hash faster than No index",28,30,0.933333333333333
+1e+05,"B+ tree faster than No index",30,30,1
+1e+05,"Hash faster than No index",30,30,1
+5e+05,"B+ tree faster than No index",30,30,1
+5e+05,"Hash faster than No index",30,30,1

@@ -5,12 +5,16 @@ required_files <- c(
   "00_setup.R",
   "01_collect_timings.R",
   "database_setup.R",
+  "app.R",
+  "run_website.R",
   "02_simple_analysis.R",
+  "04_syllabus_math.R",
   "README.md",
   "docs/ABSTRACT.md",
   "docs/METHODOLOGY.md",
   "docs/PRESENTATION_GUIDE.md",
   "docs/FRIEND_SETUP.md",
+  "docs/WEBSITE_GUIDE.md",
   "data/query_times.csv",
   "data/run_information.txt",
   "sql/01_create_benchmark_tables.sql",
@@ -18,9 +22,13 @@ required_files <- c(
   "results/summary_statistics.csv",
   "results/speedup_results.csv",
   "results/paired_t_test_results.csv",
+  "results/syllabus_expected_value_variance.csv",
+  "results/syllabus_empirical_probability.csv",
+  "results/syllabus_correlation.txt",
   "results/final_conclusion.txt",
   "plots/mean_response_times.png",
-  "plots/boxplot_500000_rows.png"
+  "plots/boxplot_500000_rows.png",
+  "plots/table_size_vs_no_index_time.png"
 )
 
 file_check <- data.frame(

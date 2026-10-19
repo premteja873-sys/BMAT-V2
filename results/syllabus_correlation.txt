@@ -1,0 +1,11 @@
+CORRELATION OF TABLE SIZE AND NO-INDEX RESPONSE TIME
+====================================================
+
+Pearson correlation on log(table size) and log(response time):
+r = 0.9705, p-value = 3.906e-56
+
+Spearman rank correlation on table size and response time:
+rho = 0.9429, p-value = 8.869e-44
+
+Interpretation: a positive coefficient means response time tends to increase
+as table size increases. This is supporting evidence, not the primary test.

@@ -22,25 +22,33 @@ Condition counts:
       5e+05     No index           30
 
 File check:
-                               file exists
-                         00_setup.R   TRUE
-               01_collect_timings.R   TRUE
-                   database_setup.R   TRUE
-               02_simple_analysis.R   TRUE
-                          README.md   TRUE
-                   docs/ABSTRACT.md   TRUE
-                docs/METHODOLOGY.md   TRUE
-         docs/PRESENTATION_GUIDE.md   TRUE
-               docs/FRIEND_SETUP.md   TRUE
-               data/query_times.csv   TRUE
-           data/run_information.txt   TRUE
- sql/01_create_benchmark_tables.sql   TRUE
-  sql/02_verify_execution_plans.sql   TRUE
-     results/summary_statistics.csv   TRUE
-        results/speedup_results.csv   TRUE
-  results/paired_t_test_results.csv   TRUE
-       results/final_conclusion.txt   TRUE
-      plots/mean_response_times.png   TRUE
-      plots/boxplot_500000_rows.png   TRUE
+                                         file exists
+                                   00_setup.R   TRUE
+                         01_collect_timings.R   TRUE
+                             database_setup.R   TRUE
+                                        app.R   TRUE
+                                run_website.R   TRUE
+                         02_simple_analysis.R   TRUE
+                           04_syllabus_math.R   TRUE
+                                    README.md   TRUE
+                             docs/ABSTRACT.md   TRUE
+                          docs/METHODOLOGY.md   TRUE
+                   docs/PRESENTATION_GUIDE.md   TRUE
+                         docs/FRIEND_SETUP.md   TRUE
+                        docs/WEBSITE_GUIDE.md   TRUE
+                         data/query_times.csv   TRUE
+                     data/run_information.txt   TRUE
+           sql/01_create_benchmark_tables.sql   TRUE
+            sql/02_verify_execution_plans.sql   TRUE
+               results/summary_statistics.csv   TRUE
+                  results/speedup_results.csv   TRUE
+            results/paired_t_test_results.csv   TRUE
+ results/syllabus_expected_value_variance.csv   TRUE
+   results/syllabus_empirical_probability.csv   TRUE
+             results/syllabus_correlation.txt   TRUE
+                 results/final_conclusion.txt   TRUE
+                plots/mean_response_times.png   TRUE
+                plots/boxplot_500000_rows.png   TRUE
+        plots/table_size_vs_no_index_time.png   TRUE
 
 Overall status: PASS

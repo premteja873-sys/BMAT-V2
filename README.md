@@ -33,6 +33,11 @@ The project deliberately uses a small set of understandable methods:
 5. Paired t-test: were matched response-time differences statistically clear?
 6. Bar chart and boxplot: visual comparison of the methods.
 
+The separate `04_syllabus_math.R` script connects the same experiment to the
+syllabus using estimated expected value, variance, empirical probability, and
+Pearson/Spearman correlation. It is supporting mathematics and does not change
+the main Version 2 comparison.
+
 ## Main real result
 
 At 500,000 rows:
@@ -55,6 +60,10 @@ difference between the two indexed methods was not statistically clear.
 - `database_setup.R`: safely recreates `indexing_project` and all nine tables
   on another computer; it requests the local password without saving it.
 - `02_simple_analysis.R`: reads the saved CSV and creates all simple results.
+- `04_syllabus_math.R`: adds syllabus-aligned expected value, variance,
+  empirical probability, Pearson correlation and Spearman correlation.
+- `04_syllabus_math.R`: adds relevant syllabus calculations without changing
+  the core experiment.
 - `03_validate_project.R`: checks the completed project.
 - `data/query_times.csv`: the 270 original real measurements.
 - `results/`: final numerical results and conclusion.
@@ -62,6 +71,8 @@ difference between the two indexed methods was not statistically clear.
 - `sql/`: PostgreSQL table creation and execution-plan verification.
 - `docs/`: abstract, methodology and presentation guide.
 - `docs/FRIEND_SETUP.md`: exact instructions for another computer.
+- `run_website.R`: starts the saved-results local presentation website.
+- `app.R`: website source; it does not connect to PostgreSQL.
 
 ## How to reproduce the saved analysis
 
@@ -70,6 +81,7 @@ Open `DatabaseIndexingStatistics_Simple.Rproj` in RStudio and run:
 ```r
 source("00_setup.R")
 source("02_simple_analysis.R")
+source("04_syllabus_math.R")
 source("03_validate_project.R")
 ```
 
@@ -96,3 +108,14 @@ computer. Individual timings can change with caching and background system
 activity. The paired t-test is a simple primary analysis; timing data can be
 skewed, so results should be interpreted as evidence under the tested
 conditions rather than a universal guarantee.
+
+The syllabus bridge is supporting analysis. The primary project conclusion is
+still based on the means, speed-ups, graphs and paired t-tests.
+
+## Local presentation website
+
+Run `source("run_website.R")` in RStudio. The local Shiny website reads the
+existing CSV and result files, displays the database structure, accepts a
+sample record ID, shows the 30-run summaries, graphs, test cases and final
+conclusion, and does not require a PostgreSQL connection. See
+`docs/WEBSITE_GUIDE.md`.
