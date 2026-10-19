@@ -290,10 +290,14 @@ server <- function(input, output, session) {
 
   output$test_cases <- renderTable({
     valid_record <- 5000
-    same_record <- all(c("record_id", "lookup_key", "student_name", "score") %in% names(timings))
+    required_timing_columns <- c(
+      "table_size", "index_method", "run_number", "block_id",
+      "execution_order", "lookup_key", "response_time_ms", "returned_rows"
+    )
+    same_record <- all(required_timing_columns %in% names(timings))
     condition_counts <- table(timings$table_size, timings$index_method)
     data.frame(
-      Test = c("Valid record 5000", "Invalid record 0", "Invalid record 500001", "270 timing rows", "30 rows per condition", "Required data columns"),
+      Test = c("Valid record 5000", "Invalid record 0", "Invalid record 500001", "270 timing rows", "30 rows per condition", "Required timing columns"),
       Expected = c("Accepted", "Rejected", "Rejected", "PASS", "PASS", "PASS"),
       Status = c(
         ifelse(valid_record >= 1 && valid_record <= 500000, "PASS", "FAIL"),
